@@ -22,6 +22,15 @@ app.get("/", (req, res) => {
 });
 
 
+const dashboardRoutes =
+  require("./routes/dashboardRoutes");
+
+app.use(
+  "/api/dashboard",
+  dashboardRoutes
+);
+
+
 const path = require("path");
 
 app.use(

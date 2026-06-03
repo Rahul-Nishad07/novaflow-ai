@@ -30,6 +30,18 @@ app.use(
   dashboardRoutes
 );
 
+const aiRoutes =
+  require("./routes/aiRoutes");
+
+app.use(
+  "/api/ai",
+  aiRoutes
+);
+
+const ocrRoutes =
+  require("./routes/ocrRoutes");
+
+  app.use("/api/ocr", ocrRoutes);
 
 const path = require("path");
 

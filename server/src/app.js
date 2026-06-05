@@ -38,6 +38,13 @@ app.use(
   aiRoutes
 );
 
+const pdfRoutes =
+  require("./routes/pdfRoutes");
+  app.use(
+  "/api/pdf",
+  pdfRoutes
+);
+
 const ocrRoutes =
   require("./routes/ocrRoutes");
 

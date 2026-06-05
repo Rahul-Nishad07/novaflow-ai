@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link ,NavLink } from "react-router-dom";
 
 function Sidebar() {
   return (
@@ -7,27 +7,14 @@ function Sidebar() {
         NovaFlow AI
       </h2>
 
-      <ul className="space-y-4">
-        <li>
-          <Link to="/dashboard">Dashboard</Link>
-        </li>
-
-        <li>
-          <Link to="/upload">Upload</Link>
-        </li>
-
-        <li>
-          <Link to="/workflow">Workflow</Link>
-        </li>
-
-        <li>
-          <Link to="/analytics">Analytics</Link>
-        </li>
-
-        <li>
-          <Link to="/settings">Settings</Link>
-        </li>
-      </ul>
+    <ul className="flex flex-col gap-4">
+  <NavLink to="/dashboard">Dashboard</NavLink>
+  <NavLink to="/upload">Upload</NavLink>
+  <NavLink to="/documents">Documents</NavLink>
+  <NavLink to="/workflow">Workflow</NavLink>
+  <NavLink to="/analytics">Analytics</NavLink>
+  <NavLink to="/settings">Settings</NavLink>
+</ul>
     </div>
   );
 }

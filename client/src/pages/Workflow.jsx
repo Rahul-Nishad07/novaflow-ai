@@ -1,6 +1,6 @@
 import MainLayout from "../components/layout/MainLayout";
 
-function WorkflowPage() {
+function Workflow() {
   return (
     <MainLayout>
       <h1>Workflow</h1>
@@ -8,4 +8,4 @@ function WorkflowPage() {
   );
 }
 
-export default WorkflowPage;
+export default Workflow;

@@ -1,27 +1,31 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Login from "../pages/Login";
 import Dashboard from "../pages/Dashboard";
 import UploadDocument from "../pages/UploadDocument";
+import Documents from "../pages/Documents";
+import Workflow from "../pages/Workflow";
 
-import WorkflowPage from "../pages/WorkflowPage";
-import Analytics from "../pages/Analytics";
-import Settings from "../pages/Settings";
+import MainLayout from "../components/layout/MainLayout";
+import ProtectedRoute from "./ProtectedRoute";
 
-function AppRoutes() {
+export default function AppRoutes() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Login />} />
+    <Routes>
+      <Route path="/" element={<Login />} />
 
+      <Route
+        element={
+          <ProtectedRoute>
+            <MainLayout />
+          </ProtectedRoute>
+        }
+      >
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/upload" element={<UploadDocument />} />
-        <Route path="/workflow" element={<WorkflowPage />} />
-        <Route path="/analytics" element={<Analytics />} />
-        <Route path="/settings" element={<Settings />} />
-      </Routes>
-    </BrowserRouter>
+        <Route path="/documents" element={<Documents />} />
+        <Route path="/workflow" element={<Workflow />} />
+      </Route>
+    </Routes>
   );
 }
-
-export default AppRoutes;

@@ -45,6 +45,16 @@ const pdfRoutes =
   pdfRoutes
 );
 
+
+const summaryRoutes =
+  require("./routes/summaryRoutes");
+
+app.use(
+  "/api/summary",
+  summaryRoutes
+);
+
+
 const ocrRoutes =
   require("./routes/ocrRoutes");
 

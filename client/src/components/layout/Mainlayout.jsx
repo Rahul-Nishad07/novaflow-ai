@@ -17,7 +17,7 @@ export default function MainLayout() {
         <Sidebar />
       </div>
 
-      {/* Overlay for mobile when sidebar is open */}
+      {/* Overlay for mobile when silogoutdebar is open */}
       {isSidebarOpen && (
         <div 
           className="fixed inset-0 z-40 bg-black/50 md:hidden" 
@@ -53,22 +53,27 @@ export default function MainLayout() {
 
 
 
-// import Sidebar from "./Sidebar";
-// import Navbar from "./Navbar";
-// import { Outlet } from "react-router-dom";
+// // import Sidebar from "./Sidebar";
+// // import Navbar from "./Navbar";
+// // import { Outlet } from "react-router-dom";
 
-// export default function MainLayout() {
-//   return (
-//     <div className="flex min-h-screen bg-slate-950">
-//       <Sidebar />
+// // export default function MainLayout() {
+// //   return (
+// //     <div className="flex min-h-screen bg-slate-950">
+// //       <Sidebar />
 
-//       <div className="flex-1">
-//         <Navbar />
+// //       <div className="flex-1">
+// //         <Navbar />
 
-//         <main className="p-6">
-//           <Outlet />
-//         </main>
-//       </div>
-//     </div>
-//   );
-// }
+// //         <main className="p-6">
+// //           <Outlet />
+// //         </main>
+// //       </div>
+// //     </div>
+// //   );
+// // }
+
+
+
+
+

@@ -1,3 +1,4 @@
+import { User } from "lucide-react";
 import { createContext, useEffect, useState } from "react";
 
 export const AuthContext = createContext();
@@ -17,8 +18,8 @@ export const AuthProvider = ({ children }) => {
       setToken(savedToken);
     }
 
-    if (savedUser) {
-      setUser(JSON.parse(savedUser));
+    if (user) {
+      setUser(JSON.parse(user));
     }
   }, []);
 

@@ -1,16 +1,65 @@
 import { NavLink } from "react-router-dom";
-import { LayoutDashboard, UploadCloud, FileText, GitBranch, BarChart3, Settings, Bot } from "lucide-react";
+import {
+  LayoutDashboard,
+  UploadCloud,
+  FileText,
+  GitBranch,
+  BarChart3,
+  Settings,
+  Bot,
+  User,
+  Bell, ScanText
+} from "lucide-react";
 
 function Sidebar() {
   // Navigation config for cleaner mapping
-  const navItems = [
-    { name: "Dashboard", path: "/dashboard", icon: LayoutDashboard },
-    { name: "Upload", path: "/upload", icon: UploadCloud },
-    { name: "Documents", path: "/documents", icon: FileText },
-    { name: "Workflow", path: "/workflow", icon: GitBranch },
-    { name: "Analytics", path: "/analytics", icon: BarChart3 },
-    { name: "Settings", path: "/settings", icon: Settings },
-  ];
+ const navItems = [
+  {
+    name: "Dashboard",
+    path: "/dashboard",
+    icon: LayoutDashboard,
+  },
+  {
+    name: "Upload",
+    path: "/upload",
+    icon: UploadCloud,
+  },
+  {
+    name: "Documents",
+    path: "/documents",
+    icon: FileText,
+  },
+  {
+    name: "Workflow",
+    path: "/workflow",
+    icon: GitBranch,
+  },
+  {
+    name: "Analytics",
+    path: "/analytics",
+    icon: BarChart3,
+  },
+  {
+    name: "Notifications",
+    path: "/notifications",
+    icon: Bell,
+  },
+  {
+    name: "Profile",
+    path: "/profile",
+    icon: User,
+  },
+  {
+    name: "Settings",
+    path: "/settings",
+    icon: Settings,
+  },
+  {
+  name: "OCR",
+  path: "/ocr",
+  icon: ScanText,
+}
+];
 
   return (
     <aside className="w-64 h-screen bg-slate-900 border-r border-slate-800 flex flex-col p-6 sticky top-0">

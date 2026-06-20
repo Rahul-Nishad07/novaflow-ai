@@ -1,5 +1,11 @@
-import API from "./axios";
+import axios from "axios";
 
-export const getStats = () => {
-  return API.get("/dashboard/stats");
-};
+export const getStats = () =>
+  axios.get(
+    "http://localhost:5000/api/dashboard/stats"
+  );
+
+  export const getRecentUploads = () =>
+  axios.get(
+    "http://localhost:5000/api/dashboard/recent-uploads"
+  );
